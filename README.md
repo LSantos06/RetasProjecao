@@ -13,8 +13,8 @@ Figura.1). Os passos do programa devem ser:
 
 ### Grupo
 * Filipe Teixeira
-  * Matrícula: 13/0013072
-  * GitHub: [lucasavelino](https://github.com/lucasavelino)
+  * Matrícula: 14/0139486
+  * GitHub: [filipe5214957](https://github.com/filipe5214957)
 * Lucas Nascimento
   * Matrícula: 14/0151010
   * GitHub: [LSantos06](https://github.com/LSantos06) 
