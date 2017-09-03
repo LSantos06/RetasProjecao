@@ -3,7 +3,7 @@
 % Filipe Teixeira & Lucas Santos
 
 imagens = cell(1,5);
-for i=1:5
+for i=1:1
     % Salvando a imagem como variavel
     imagens{i} = imread(sprintf('Imagens/%d.jpeg',i));
     % Pegando os pontos da imagem

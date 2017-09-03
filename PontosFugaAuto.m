@@ -6,7 +6,7 @@
 imagens = cell(1,5);
 % Vetor de linhas de fuga
 linhas_y = cell(5);
-for i=1:5
+for i=1:1
     imagens{i}=imread(sprintf('Imagens/%d.jpeg',i));
     % Convertendo imagem para tons de cinza
     imagem_cinza = rgb2gray(imagens{i}); 
