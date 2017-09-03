@@ -12,17 +12,17 @@ pf_x = zeros(2,1);
 pf_y = zeros(2,1);
 
 % Obtendo pontos de topo e base da altura da pessoa 1 (altura conhecida)
-title('Marque (nessa ordem) o topo e a base da altura (Pessoa 1 - altura conhecida)'), [p1_x,p1_y] = getpts(figure(1));
+title('Marque (nessa ordem) o topo e a base da altura (Pessoa 1 - altura conhecida) e pressione enter'), [p1_x,p1_y] = getpts(figure(1));
 plot(p1_x(1),p1_y(1), 'x', 'LineWidth', 2, 'Color', 'Yellow');
 plot(p1_x(2),p1_y(2), 'x', 'LineWidth', 2, 'Color', 'Cyan');
 
 % Obtendo pontos de topo e base da altura da pessoa 2 (altura desconhecida)
-title('Marque (nessa ordem) o topo e a base da altura (Pessoa 2 - altura desconhecida)'), [p2_x,p2_y] = getpts(figure(1));
+title('Marque (nessa ordem) o topo e a base da altura (Pessoa 2 - altura desconhecida) e pressione enter'), [p2_x,p2_y] = getpts(figure(1));
 plot(p2_x(1),p2_y(1), 'x', 'LineWidth', 2, 'Color', 'Yellow');
 plot(p2_x(2),p2_y(2), 'x', 'LineWidth', 2, 'Color', 'Cyan');
 
 % Obtendo Reta 1 do primeiro par de retas paralelas
-title('Primeiro par de paralelas (Reta 1)'), [r_x,r_y] = getline(figure(1));
+title('Indique um segmento (Reta 1) do primeiro par de paralelas - marque dois pontos e pressione enter'), [r_x,r_y] = getline(figure(1));
 % Cálculo dos coeficientes m e n em y = m*x+n
 m11 = (r_y(2)-r_y(1))/(r_x(2)-r_x(1)); % m = (y2-y1)/(x2-x1)
 n11 = r_y(1)-m11*r_x(1); % n = y1-m*x1 = y2-m*x2
@@ -32,7 +32,7 @@ r_y = m11*r_x+n11;
 line(r_x,r_y, 'LineWidth', 2, 'Color', 'Red');
 
 % Obtendo Reta 2 do primeiro par de retas paralelas
-title('Primeiro par de paralelas (Reta 2)'), [r_x,r_y] = getline(figure(1));
+title('Indique um segmento (Reta 2) do primeiro par de paralelas - marque dois pontos e pressione enter'), [r_x,r_y] = getline(figure(1));
 % Cálculo dos coeficientes m e n em y = m*x+n
 m12 = (r_y(2)-r_y(1))/(r_x(2)-r_x(1)); % m = (y2-y1)/(x2-x1)
 n12 = r_y(1)-m12*r_x(1); % n = y1-m*x1 = y2-m*x2
@@ -47,7 +47,7 @@ pf_y(1) = m11*pf_x(1)+n11; % y = m1*x+n1 = m2*x+n2
 plot(pf_x(1),pf_y(1), 'x', 'LineWidth', 2, 'Color', 'Magenta');
 
 % Obtendo Reta 1 do segundo par de retas paralelas
-title('Segundo par de paralelas (Reta 1)'), [r_x,r_y] = getline(figure(1));
+title('Indique um segmento (Reta 1) do segundo par de paralelas  - marque dois pontos e pressione enter'), [r_x,r_y] = getline(figure(1));
 % Cálculo dos coeficientes m e n em y = m*x+n
 m21 = (r_y(2)-r_y(1))/(r_x(2)-r_x(1)); % m = (y2-y1)/(x2-x1)
 n21 = r_y(1)-m21*r_x(1); % n = y1-m*x1 = y2-m*x2
@@ -57,7 +57,7 @@ r_y = m21*r_x+n21;
 line(r_x,r_y, 'LineWidth', 2, 'Color', 'Green');
 
 % Obtendo Reta 2 do segundo par de retas paralelas
-title('Segundo par de paralelas (Reta 2)'), [r_x,r_y] = getline(figure(1));
+title('Indique um segmento (Reta 2) do segundo par de paralelas - marque dois pontos e pressione enter'), [r_x,r_y] = getline(figure(1));
 % Cálculo dos coeficientes m e n em y = m*x+n
 m22 = (r_y(2)-r_y(1))/(r_x(2)-r_x(1)); % m = (y2-y1)/(x2-x1)
 n22 = r_y(1)-m22*r_x(1); % n = y1-m*x1 = y2-m*x2
