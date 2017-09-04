@@ -6,7 +6,7 @@ ground plane) e medir a altura da outra pessoa, dado que você conhece e fornece
 Objetos com direções ortogonais, e no solo devem estar presentes na imagem (ver exemplo na 
 Figura.1). Os passos do programa devem ser: 
 
- - [ ] Encontre e calcule (i.e. de forma computacional ou manual) dois pontos de fuga (i.e. vanishing points) e uma reta de fuga, e visualize-os nas suas 5 imagens;
+ - [X] Encontre e calcule (i.e. de forma computacional ou manual) dois pontos de fuga (i.e. vanishing points) e uma reta de fuga, e visualize-os nas suas 5 imagens;
  - [ ] Calcule a matriz de rotação R (i.e. com relação a duas ou mais imagens rotacionadas da mesma cena), e visualize os eixos 3D da câmera com respeito ao chão usando a função plot3 do Matlab; 
  - [ ] Meça as alturas das pessoas (i.e. você e mais uma pessoa, de forma computacional) nas 5 imagens usando a razão proporcional pelos pontos de 
  fuga e medida já conhecida.
