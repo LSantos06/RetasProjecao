@@ -7,6 +7,7 @@ img = imread('Imagens/exemplo.png');
 img_size = size(img);
 figure(1), imshow(img), hold on;
 
+%% Pontos de Fuga
 % Prepando vetores para acomodares as coordenadas dos pontos de fuga
 pf_x = zeros(2,1);
 pf_y = zeros(2,1);
@@ -94,3 +95,25 @@ v_x = (lf_n-p_n)/(p_m-lf_m) % x = (n2-n1)/(m1-m2)
 v_y = p_m*v_x+p_n; % y = m1*x+n1 = m2*x+n2
 plot(v_x,v_y, 'x', 'LineWidth', 2, 'Color', 'Blue');
 
+%% Matriz de rotacao
+
+% Matriz relativa a camera do iPhone 6
+K = [1229 0 size(img,2)/2;
+     0 1153 size(img,1)/2;
+     0 0 1];
+
+% Pontos de fuga
+pf_1 = [pf_x(1); 
+        pf_y(1); 
+        1];
+pf_2 = [pf_x(2); 
+        pf_y(2); 
+        1];
+
+% Dimensoes 3D (r1, r2 e r3)
+r1 = (K\pf_1)/(norm(K\pf_1));
+r2 = (K\pf_2)/(norm(K\pf_2));
+r3 = cross(r1,r2);
+R = [r1 r2 r3];
+fprintf("R = \n"); disp(R);
+figure(2), title("Eixos 3D da camera"), plot3(r1,r2,r3);
